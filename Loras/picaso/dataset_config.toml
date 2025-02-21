@@ -1,0 +1,18 @@
+[[datasets]]
+
+[[datasets.subsets]]
+num_repeats = 9
+image_dir = "/content/drive/MyDrive/Loras/picaso/dataset"
+class_tokens = "picaso"
+
+[general]
+resolution = 1024
+shuffle_caption = true
+keep_tokens = 1
+flip_aug = false
+caption_extension = ""
+enable_bucket = true
+bucket_no_upscale = false
+bucket_reso_steps = 64
+min_bucket_reso = 256
+max_bucket_reso = 4096

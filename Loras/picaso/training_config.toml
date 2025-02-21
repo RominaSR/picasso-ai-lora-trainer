@@ -1,0 +1,55 @@
+[network_arguments]
+unet_lr = 0.0003
+text_encoder_lr = 6e-5
+network_dim = 8
+network_alpha = 4
+network_module = "networks.lora"
+network_train_unet_only = false
+
+[optimizer_arguments]
+learning_rate = 0.0003
+lr_scheduler = "cosine_with_restarts"
+lr_scheduler_num_cycles = 3
+lr_warmup_steps = 12
+optimizer_type = "AdamW8bit"
+optimizer_args = [ "weight_decay=0.1", "betas=[0.9,0.99]",]
+loss_type = "l2"
+max_grad_norm = 1.0
+
+[training_arguments]
+lowram = true
+pretrained_model_name_or_path = "/content/ponyDiffusionV6XL.safetensors"
+vae = "/content/sdxl_vae.safetensors"
+max_train_epochs = 10
+train_batch_size = 4
+seed = 42
+max_token_length = 225
+xformers = false
+sdpa = true
+min_snr_gamma = 8.0
+no_half_vae = true
+gradient_checkpointing = true
+gradient_accumulation_steps = 1
+max_data_loader_n_workers = 1
+persistent_data_loader_workers = true
+mixed_precision = "fp16"
+full_fp16 = true
+full_bf16 = false
+cache_latents = true
+cache_latents_to_disk = true
+cache_text_encoder_outputs = false
+min_timestep = 0
+max_timestep = 1000
+prior_loss_weight = 1.0
+multires_noise_iterations = 6
+multires_noise_discount = 0.3
+
+[saving_arguments]
+save_precision = "fp16"
+save_model_as = "safetensors"
+save_every_n_epochs = 1
+save_last_n_epochs = 10
+output_name = "picaso"
+output_dir = "/content/drive/MyDrive/Loras/picaso/output"
+log_prefix = "picaso"
+logging_dir = "/content/drive/MyDrive/Loras/_logs"
