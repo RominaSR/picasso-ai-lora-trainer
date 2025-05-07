@@ -49,7 +49,7 @@ This project fine-tunes Stable Diffusion XL using **LoRA** on a small dataset of
 ---
 
 ## 📂 Project Files
-- 📜 **Google Colab Notebook:** [`picasso_lora_trainer_xl.ipynb`](https://github.com/RominaSR/picasso-ai-lora-trainer/blob/main/picasso_lora_trainer_xl.ipynb)  
+- 📜 **Google Colab Notebook:** [`picasso_lora_trainer_xl.ipynb`](https://github.com/RominaSR/picasso-ai-lora-trainer/blob/main/picasso_lora_trainer_xl_clean.ipynb)  
 - 🖼️ **Generated Imagesfolder:** [`generative_picasso`](https://github.com/RominaSR/picasso-ai-lora-trainer/tree/main/generative_picasso)  
 - 🧠 **Trained LoRA models:** [`Loras`](https://github.com/RominaSR/picasso-ai-lora-trainer/tree/main/Loras)  
 
